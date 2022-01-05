@@ -1,0 +1,15 @@
+### requesting a static image
+GET http://localhost:3456/get/images/test.jpg
+
+###
+POST http://localhost:3456/upload
+content-type: application/json
+
+{
+    "isChat": "true",
+    "isProfile": "true",
+    "fileName": "true",
+}
+
+### requesting testing html
+GET http://localhost:3456/get/index.html

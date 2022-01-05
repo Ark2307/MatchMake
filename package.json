@@ -1,0 +1,34 @@
+{
+  "name": "matchmake",
+  "version": "1.0.0",
+  "description": "This is a package to start all the server's simultaneously",
+  "directories": {
+    "doc": "docs"
+  },
+  "scripts": {
+    "postinstall": "npm run install-backend && npm run install-frontend && npm run install-server",
+    "install-backend": "cd \"backend\"",
+    "install-frontend": "cd \"frontend\"",
+    "install-server": "cd \"server\"",
+    "start-backend": "cd \"backend\"",
+    "start-frontend-dev": "cd \"frontend\" && npm run dev",
+    "start-frontend-production": "cd \"frontend\" && npm run production",
+    "start-server": "cd \"server\" && npm start",
+    "all": "npm run start",
+    "production": "concurrently \"npm run start-server\" \"npm run start-frontend-production\"",
+    "start": "concurrently \"npm run start-server\" \"npm run start-frontend-dev\""
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Ark2307/MatchMake.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Ark2307/MatchMake/issues"
+  },
+  "homepage": "https://github.com/Ark2307/MatchMake#readme",
+  "devDependencies": {
+    "concurrently": "^6.4.0"
+  }
+}

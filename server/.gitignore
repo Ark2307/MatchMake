@@ -1,0 +1,19 @@
+node_modules
+.vscode
+.atom
+.idea
+
+# ignore file which are uploaded by the server and files which server serves
+/media
+
+# ignoring build directory
+/build
+
+# ignoring ts builds
+tsconfig.tsbuildinfo
+
+# ignoring config and error log files
+.env
+*.log
+
+*.md

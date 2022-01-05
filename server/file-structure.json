@@ -1,0 +1,10 @@
+{
+    "chatGIFs": "/media/chats/gifs/",
+    "chatImages": "/media/chats/images/",
+    "chatStickers": "/media/chats/stickers/",
+    "chatVideos": "/media/chats/videos/",
+    "images": "/media/images/",
+    "gifs": "/media/gifs/",
+    "videos": "/media/videos/",
+    "profiles": "/media/profiles/"
+}

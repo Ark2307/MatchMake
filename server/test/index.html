@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Ajax JavaScript File Upload Example</title>
+    </head>
+
+    <body>
+        <!-- HTML5 Input Form Elements -->
+        <label>Select the file</label><br />
+        <input id="fileupload" type="file" name="fileupload" />
+        <br /><br /><br />
+        <label>Does this media belong to the chat section?</label><br />
+        <select name="isChat" id="isChat">
+            <option value="true" selected>true</option>
+            <option value="false">false</option>
+        </select>
+        <br /><br /><br />
+        <label>Is this a Profile Media?</label><br />
+        <select name="isProfile" id="isProfile">
+            <option value="true">true</option>
+            <option value="false" selected>false</option>
+        </select>
+        <br /><br /><br />
+        <button id="upload-button" onclick="uploadFile()">Upload</button>
+
+        <!-- Ajax JavaScript File Upload Logic -->
+        <script>
+            async function uploadFile() {
+                let formData = new FormData();
+                formData.append("file", fileupload.files[0]);
+                formData.append("isChat", isChat.value);
+                formData.append("isProfile", isProfile.value);
+                formData.append("fileName", fileupload.files[0].name);
+                await fetch("http://localhost:3456/upload", {
+                    method: "POST",
+                    body: formData
+                });
+                alert("The file has been uploaded successfully.");
+            }
+        </script>
+    </body>
+</html>
