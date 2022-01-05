@@ -1,0 +1,49 @@
+.editRoomMessage {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+}
+
+.senderMessage {
+    margin-left: 12px;
+    background-color: lightgray;
+    padding: 14px;
+    border-radius: 25px;
+}
+
+.personalRoom > p {
+    text-align: center;
+    padding: 20px;
+    color: gray;
+}
+
+.userMessage {
+    margin-left: auto;
+    background-color: rgb(112, 170, 240);
+    padding: 14px;
+    border-radius: 25px;
+}
+
+.editSendForm {
+    display: flex;
+    padding: 2px;
+    position: fixed;
+    bottom: 5px;
+    width: 100%;
+    border-top: 1px solid lightgrey;
+}
+
+.editSend {
+    flex: 1;
+    padding: 10px;
+    border: none;
+}
+
+.editSendButton {
+    border: none;
+    margin-right: 22px;
+    background-color: rgb(195, 205, 216);
+    font-weight: bolder;
+    width: 80px;
+    color: rgb(206, 18, 49);
+}

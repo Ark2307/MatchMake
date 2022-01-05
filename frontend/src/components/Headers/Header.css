@@ -1,0 +1,14 @@
+.header {
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 2px solid rgb(251, 251, 251);
+
+    padding: 15px;
+}
+
+.message {
+    box-shadow: rgba(69, 20, 20, 0.3) 0px 19px 38px,
+        rgba(0, 0, 0, 0.22) 0px 15px 12px;
+    padding: 1vw !important;
+    color: rgb(39, 159, 220) !important;
+}

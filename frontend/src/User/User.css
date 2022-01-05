@@ -1,0 +1,98 @@
+@import url(/src/constants.css);
+
+.user-section-outermost-div {
+    font-size: inherit;
+    width: var(--default-user-section-width-in-landscape);
+    margin-right: auto;
+    margin-left: auto;
+}
+
+@media (max-width: 768px) {
+    .user-section-outermost-div {
+        width: 100%;
+    }
+}
+
+.user-section-cover-photo {
+    width: 100%;
+    height: clamp(20vh, 200px, 30vh);
+    box-shadow: inset 0em -2.5em 2.5em 0em rgba(0, 0, 0, 0.3);
+    background-repeat: no-repeat; /* Do not repeat the image */
+    background-size: cover;
+}
+
+.user-section-profile-names-outermost-div {
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: var(--default-user-section-default-margins-between-content);
+    /* margin-top: var(--default-user-section-default-margins-between-content); */
+    margin-bottom: var(--default-user-section-default-margins-between-content);
+    /* width: fit-content; */
+    /* background-color: grey; */
+    transform: translateY(calc(-1 * var(--default-user-profile-pic-size) / 4));
+}
+
+.user-section-names-outer-div {
+    margin-top: auto;
+    margin-right: auto;
+    margin-left: calc(var(--default-user-profile-pic-size) / 5);
+    margin-bottom: var(--default-user-section-default-margins-between-content);
+}
+
+.user-section-username {
+    font-family: "Inter", sans-serif;
+    font-size: 2em;
+    margin-bottom: -0.2em;
+}
+
+.user-section-realname {
+    font-size: 1.5em;
+    /* text-transform: uppercase; */
+    letter-spacing: 0.1em;
+}
+
+.user-section-bio {
+    padding-left: var(--default-user-section-default-margins-between-content);
+    margin-top: var(--default-user-section-default-margins-between-content);
+    /* margin-bottom: 2em; */
+    transform: translateY(
+        calc(
+            -1 * var(--default-user-section-default-margins-between-content) / 2
+        )
+    );
+}
+
+.user-section-profile-image {
+    width: var(--default-user-profile-pic-size);
+    /* height: var(--default-user-profile-pic-size); */
+    aspect-ratio: 1/1;
+    object-fit: cover;
+    border-radius: 50%;
+    box-shadow: 0px 0px 0px
+        calc(var(--default-user-profile-pic-border-width) * 2) white;
+    /* 0px 0px 0px calc(var(--default-user-profile-pic-border-width) * 2)
+            var(--default-border-color); */
+    /* margin-right: var(--); */
+}
+
+.user-section-gender-livesIn-outer-div {
+    border-top: var(--default-user-section-livesIn-gender-border-width) solid
+        var(--default-user-section-livesIn-gender-border-color);
+    border-bottom: var(--default-user-section-livesIn-gender-border-width) solid
+        var(--default-user-section-livesIn-gender-border-color);
+    margin-top: 1em;
+}
+
+.user-section-gender {
+    margin-right: auto;
+    margin-top: auto;
+    margin-bottom: auto;
+    padding: var(--default-user-section-livesIn-gender-padding);
+}
+
+.user-section-livesIn {
+    margin-left: auto;
+    margin-top: auto;
+    margin-bottom: auto;
+    padding: var(--default-user-section-livesIn-gender-padding);
+}

@@ -1,0 +1,32 @@
+.editMessageSyntax {
+    margin-top: 5px !important;
+    display: flex !important ;
+    align-items: center !important ;
+    justify-content: space-between !important ;
+    padding: 20px !important;
+
+    box-shadow: rgba(46, 78, 240, 0.4) 0px 5px, rgba(240, 46, 170, 0.3) 0px 10px,
+        rgba(240, 46, 170, 0.2) 0px 15px, rgba(240, 46, 170, 0.1) 0px 20px,
+        rgba(240, 46, 214, 0.05) 0px 25px;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.editDetails {
+    flex: 1;
+}
+
+.editDetails > p {
+    color: gray;
+}
+
+.editTime {
+    color: lightgrey;
+}
+
+.profileImage {
+    margin-right: 10px;
+}

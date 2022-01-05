@@ -1,0 +1,48 @@
+@import url(/src/constants.css);
+
+.navigation-bar-outmost-div {
+    font-size: inherit;
+    width: 100%;
+    border-bottom: 0.5px solid var(--default-border-color);
+}
+
+.maximum-allowable-width {
+    margin: auto;
+    display: flex;
+    width: var(--default-user-section-width-in-landscape);
+}
+
+@media (max-width: 768px) {
+    .maximum-allowable-width {
+        width: 100%;
+    }
+}
+
+.navigation-tab-text-outer-div {
+    text-decoration: none;
+    min-height: 1.2em;
+    padding: 1em;
+    transition-duration: 0.25s;
+}
+
+a.navigation-tab-navlink {
+    text-decoration: none;
+    transition-duration: 0.25s;
+    border-bottom: 2px solid white;
+}
+
+a.active-tab {
+    border-bottom: 2px solid rgb(0, 204, 255);
+}
+
+a.navigation-tab-navlink:hover {
+    text-decoration: none;
+    /* font-weight: bold; */
+    background-color: var(--default-tab-hover-color);
+    border-bottom: 2px solid var(--default-tab-hover-color);
+}
+
+.navigation-tab-text {
+    color: black;
+    margin: auto;
+}

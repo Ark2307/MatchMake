@@ -1,0 +1,83 @@
+@import url(/src/constants.css);
+
+.post-outmost-div {
+    margin: auto;
+    border: none;
+    margin: none;
+    font-size: inherit;
+    position: relative;
+    width: fit-content;
+    /* background-color: grey; */
+    margin-bottom: var(--default-distance-between-two-posts);
+    margin-top: var(--default-distance-between-two-posts);
+    border-radius: var(--default-post-border-radius);
+    overflow: hidden;
+    border: var(--default-border-width) solid var(--default-border-color);
+}
+
+.post-username-div {
+    height: var(--default-post-username-div-height);
+    display: flex;
+    align-items: center;
+}
+
+.post-username-div > div {
+    height: var(--default-post-username-div-height);
+    display: flex;
+    align-items: center;
+    padding: 0 0.75em;
+}
+
+.post-profile-image {
+    width: var(--default-post-profile-size);
+    height: var(--default-post-profile-size);
+    object-fit: cover;
+    float: left;
+    border-radius: 50%;
+}
+
+.post-username {
+    font-size: var(--default-post-username-size);
+    padding-left: 0.75em;
+    margin: auto;
+    font-family: "Open Sans", sans-serif;
+}
+.post-image-div {
+    position: relative;
+    width: fit-content;
+    height: fit-content;
+}
+
+.post-image {
+    width: var(--default-post-width-in-landscape-576);
+    height: auto;
+    margin-top: auto;
+    /* position: absolute; */
+    bottom: 0;
+}
+
+@media (max-width: 768px) {
+    .post-image {
+        width: 90vw;
+    }
+}
+
+.post-message-div {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.post-message-button {
+    background-color: white;
+    outline: none;
+    border: none;
+    padding: 0.5em;
+    width: 100%;
+}
+
+.post-message-button:focus {
+    background-color: none;
+    outline: none;
+    border: none;
+}

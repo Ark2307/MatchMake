@@ -1,0 +1,45 @@
+/* Importing fonts */
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@500;600&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@600&display=swap");
+
+:root {
+    /*default font size of the whole website*/
+    font-size: medium;
+
+    /* ----------------------------------------
+        NAVIGATION BAR
+       ---------------------------------------- */
+    --default-tab-hover-color: rgb(210, 210, 210);
+
+    /* ----------------------------------------
+        POSTS
+       ---------------------------------------- */
+    --default-post-profile-size: 2.2em;
+    --default-post-username-size: 1em;
+    --default-post-username-div-height: calc(
+        var(--default-post-profile-size) * 1.5
+    );
+    --default-post-border-radius: 1em;
+    --default-border-width: 1px;
+    --default-border-color: rgba(200, 200, 200, 1);
+    --default-distance-between-two-posts: 1rem;
+
+    --default-post-width-in-landscape-576: 50vw;
+    --default-post-width-in-landscape-768: 50vw;
+    --default-post-width-in-landscape-1080: 50vw;
+
+    /* ----------------------------------------
+        USER PROFILE
+       ---------------------------------------- */
+    --default-user-profile-pic-size: 10em;
+    --default-user-profile-pic-border-width: 0.2em;
+    --default-user-section-width-in-landscape: 65%;
+    --default-user-section-livesIn-gender-border-width: 1px;
+    --default-user-section-livesIn-gender-border-color: rgba(200, 200, 200, 1);
+    --default-user-section-livesIn-gender-padding: 1em 2em;
+    --default-user-section-default-margins-between-content: 2em;
+}
+
+.display-linebreak {
+    white-space: pre;
+}

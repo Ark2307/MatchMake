@@ -1,0 +1,38 @@
+.editButton {
+    position: fixed;
+    bottom: 8vh;
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+}
+
+.editButton .MuiIconButton-root {
+    background-color: white;
+    box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px,
+        rgba(0, 0, 0, 0.22) 0px 15px 12px;
+}
+
+.editReplay {
+    padding: 2vw !important;
+    color: blue !important;
+}
+
+.editCancel {
+    padding: 2vw !important;
+    color: red !important;
+}
+
+.editLike {
+    padding: 2vw !important;
+    color: yellow !important;
+}
+
+.editStar {
+    padding: 2vw !important;
+    color: orange !important;
+}
+
+.editFlash {
+    padding: 2vw !important;
+    color: greenyellow !important;
+}

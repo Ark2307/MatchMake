@@ -1,0 +1,128 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+
+@mixin input-styles {
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+    letter-spacing: 0.15ch;
+    margin-top: 0.5rem;
+    border: 0;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.459);
+    padding-left: 1rem;
+    background-color: transparent;
+    &:focus {
+        outline: none;
+        background-color: rgba(255, 255, 255, 0.055);
+        @media screen and (min-width: 576px) {
+            border: 2px solid rgb(0, 174, 255);
+        }
+        @media screen and (max-width: 576px) {
+            border-bottom: 2px solid rgb(0, 174, 255);
+        }
+    }
+
+    @media screen and (min-width: 576px) {
+        margin-top: 0rem;
+        border: 1px solid rgba(0, 0, 0, 0.459);
+    }
+}
+#edit-details-root {
+    background: linear-gradient(
+        -45deg,
+        #aae8ff,
+        rgb(183, 175, 255),
+        #95ffe6,
+        rgb(233, 162, 255)
+    );
+    background-size: 400% 400%;
+    animation: gradient-background-animation 25s ease infinite;
+    padding: 5em 0;
+
+    @keyframes gradient-background-animation {
+        0% {
+            background-position: 0% 50%;
+        }
+        50% {
+            background-position: 100% 50%;
+        }
+        100% {
+            background-position: 0% 50%;
+        }
+    }
+
+    #edit-details-page {
+        background-color: rgba(255, 255, 255, 0.185);
+        padding: 2em 1em;
+        font-family: "Roboto", sans-serif;
+        // margin-top: 5rem;
+        // margin-bottom: 5rem;
+        margin-left: auto;
+        margin-right: auto;
+        border-radius: 1em;
+        h1 {
+            text-align: center;
+            letter-spacing: 0.15ch;
+            font-size: 2rem;
+        }
+        @media screen and (min-width: 900px) {
+            width: 60vw;
+        }
+
+        @media screen and (max-width: 900px) {
+            width: 90vw;
+        }
+
+        form {
+            .input-section-div {
+                margin: 2rem 1rem;
+
+                label {
+                    letter-spacing: 0.15ch;
+                    padding-top: 0.5rem;
+                    padding-bottom: 0.5rem;
+                }
+
+                input[type="text"],
+                input[type="email"] {
+                    @include input-styles;
+                    @media screen and (min-width: 576px) {
+                        border-radius: 18px;
+                    }
+                }
+
+                textarea {
+                    @include input-styles;
+
+                    @media screen and (min-width: 576px) {
+                        border-radius: 18px 18px 0 18px;
+                    }
+                }
+
+                @media screen and (min-width: 576px) {
+                    margin-top: 2em;
+                    margin-bottom: 2em;
+                }
+            }
+
+            .submit-div {
+                position: relative;
+                display: grid;
+                place-items: center;
+                max-width: 100%;
+                button {
+                    color: white;
+                    font-weight: bold;
+                    text-transform: uppercase;
+                    letter-spacing: 0.5ch;
+                    background-color: rgb(0, 174, 255);
+                    outline: none;
+                    border-radius: 0.5rem;
+                    padding: 0.5em 1.5em;
+                    border: 1px solid transparent;
+                    &:focus {
+                        outline: none;
+                    }
+                }
+            }
+        }
+    }
+}
