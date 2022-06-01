@@ -20,9 +20,11 @@ function Header({ backButton, callButton }) {
                     />
                 </IconButton>
             ) : (
-                <IconButton>
-                    <AccountBoxIcon fontSize="large" />
-                </IconButton>
+                <Link to="/user">
+                    <IconButton>
+                        <AccountBoxIcon fontSize="large" />
+                    </IconButton>
+                </Link>
             )}
 
             <Link to="/wall">

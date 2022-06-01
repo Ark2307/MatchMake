@@ -1,6 +1,5 @@
 import React from "react";
 import ReactDOM from "react-dom";
-import reportWebVitals from "./reportWebVitals";
 
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import { CookiesProvider } from "react-cookie";
@@ -8,7 +7,6 @@ import { CookiesProvider } from "react-cookie";
 import Chats from "./components/Chats/Chats";
 import InfoSection from "./components/aboutUs/InfoSection";
 import Login from "./components/loginForm/Login";
-import Form from "./components/SignUp/Form";
 import Subscriptions from "./components/subscriptions/Subscriptions";
 import FeedBackForm from "./components/feedbackForm/FeedBackForm";
 import EditDetails from "./components/EditDetails/EditDetails";
@@ -25,7 +23,6 @@ function Routers() {
                 <Routes>
                     <Route exact path="/login" element={<Login />} />
                     <Route exact path="/" element={<HomePage />} />
-                    <Route exact path="/signup" element={<Form />} />
                     <Route exact path="/about" element={<InfoSection />} />
                     <Route exact path="/chat" element={<Chats />} />
                     <Route
@@ -51,8 +48,3 @@ ReactDOM.render(
     </React.StrictMode>,
     document.getElementById("root")
 );
-
-// If you want to start measuring performance in your app, pass a function
-// to log results (for example: reportWebVitals(console.log))
-// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
-reportWebVitals();

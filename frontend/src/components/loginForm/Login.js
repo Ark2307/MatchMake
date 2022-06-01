@@ -1,5 +1,4 @@
-import React, { useState, useEffect } from "react";
-import { useNavigate } from "react-router-dom";
+import React, { useState } from "react";
 import "./Login.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
@@ -8,8 +7,6 @@ import {
     faGoogle
 } from "@fortawesome/free-brands-svg-icons";
 import { Link } from "react-router-dom";
-import { useCookies } from "react-cookie";
-import APIService from "../../APIService";
 
 function Login() {
     const [details, setDetails] = useState({
@@ -22,25 +19,8 @@ function Login() {
         setDetails({ ...details, [name]: value });
     };
 
-    const [token, setToken] = useCookies(["Token"]);
-    let navigate = useNavigate();
-
-    useEffect(() => {
-        if (token["Token"]) {
-            navigate("/editInfo");
-        }
-    }, [token, navigate]);
-
     const handleLoginSubmit = (e) => {
         e.preventDefault();
-
-        APIService.LoginUser(details)
-            .then((resp) => {
-                resp.token
-                    ? setToken("Token", resp.token)
-                    : console.log("Invalid Credentials");
-            })
-            .catch((err) => console.log(err));
     };
 
     return (
